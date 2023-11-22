@@ -1,0 +1,174 @@
+@use "../mixins";
+
+:root {
+	--font-family-default: 'Inter', system-ui, sans-serif;
+}
+
+html {
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-gutter: stable;
+}
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:after,
+:before {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	min-height: 100vh;
+	background: #FAF9F5;
+
+	font-family: var(--font-family-default);
+	font-weight: 400;
+
+	padding: 0 !important;
+	margin: 0 !important;
+
+	// ? - Отключение скроллбара
+
+	// -ms-overflow-style: none;
+	// scrollbar-width: none;
+
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
+
+	// ? - Отключение скроллбара
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	margin: 0;
+	padding: 0;
+}
+
+figure {
+	display: flex;
+
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	object-fit: cover;
+	vertical-align: top;
+}
+
+a {
+	cursor: pointer;
+
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+
+	color: inherit;
+
+	padding: 0;
+	margin: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	border: 0;
+	padding: 0;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	margin: -1px;
+}
+
+.base-container {
+	width: 100%;
+
+	padding: 0 12px;
+	margin: 0 auto;
+}
+
+@media(min-width: 320px) and (max-width: 576px) {
+	.base-container {
+		max-width: none;
+	}
+}
+
+@media(min-width: 576px) and (max-width: 768px) {
+	.base-container {
+		max-width: 564px;
+	}
+}
+
+@media(min-width: 768px) and (max-width: 992px) {
+	.base-container {
+		max-width: 744px;
+	}
+}
+
+@media(min-width: 992px) and (max-width: 1200px) {
+	.base-container {
+		max-width: 984px;
+	}
+}
+
+@media(min-width: 1200px) and (max-width: 1400px) {
+	.base-container {
+		max-width: 1164px;
+	}
+}
+
+@media(min-width: 1400px) {
+	.base-container {
+		max-width: 1224px;
+	}
+}
