@@ -1,0 +1,230 @@
+@use "../mixins";
+
+.heading {
+
+  margin: 86px 0 0 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 40px 0 0 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &-link-archive,
+    .heading__column-title,
+    .heading__column-subtitle,
+    .heading__column-text {
+      color: #333;
+    }
+
+    &--right {
+      position: relative;
+
+      border-radius: 16px;
+    }
+
+    &-link-archive {
+      display: inline-block;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.14px;
+
+      transition: color 0.3s;
+
+      margin: 0 0 18px 0;
+
+      &:hover {
+        color: #0148FF;
+
+        transition: color 0.3s;
+      }
+    }
+
+    &-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48px;
+
+      margin: 0 0 4px 0;
+    }
+
+    &-subtitle {
+      display: inline-block;
+
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 44px;
+
+      margin: 0 0 27px 0;
+    }
+
+    &-text {
+      position: relative;
+
+      display: inline-block;
+
+      padding: 0 0 0 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 3px;
+        height: 27px;
+        background: linear-gradient(272deg, #0148FF 2.15%, #02B3FF 97.71%);
+        border-radius: 2px;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      max-width: 240px;
+
+      margin: auto 0 0 0;
+
+      &:hover {
+        .heading__column-link-circle {
+          background: #0148FF;
+
+          color: #FFF;
+
+          transform: scale(1.1);
+
+          transition: background 0.3s, color 0.3s, transform 0.62s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+          &::before {
+            border: 1px solid #0148FF;
+
+            transition: border 0.3s;
+          }
+        }
+
+        .heading__column-link-text {
+          color: #0148FF !important;
+
+          transition: color 0.3s;
+        }
+      }
+
+      &-circle {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        width: 74px;
+        height: 74px;
+        border: 1px solid #7C7C7C;
+        border-radius: 50%;
+
+        color: #333333;
+
+        transition: background 0.3s, color 0.3s, transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+        @keyframes pulse {
+          0% {
+            opacity: 30%;
+
+            transform: scale(1);
+          }
+
+          100% {
+            opacity: 0;
+
+            transform: scale(2);
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+
+          width: 100%;
+          height: 100%;
+          border: 1px solid #7C7C7C;
+          border-radius: 50%;
+
+          animation: pulse 3s ease-in-out infinite;
+          transition: border 0.3s;
+        }
+      }
+
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.14px;
+        color: #333;
+
+        transition: color 0.3s;
+      }
+    }
+
+    &-img {
+      border-radius: 16px;
+    }
+
+    &-label {
+      position: absolute;
+      top: 24px;
+      left: 0;
+
+      background: #E0E0E0;
+      height: 51px;
+
+      &-wrapper {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 8px 18px 9px 12px;
+      }
+
+      &-text {
+        display: inline-block;
+
+        max-width: 150px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.14px;
+        color: #333;
+      }
+
+      &-img {
+        position: absolute;
+        right: -33px;
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,5 +1,71 @@
 @@include('components/_base/_base-header.html')
 
-<main class="page-content"></main>
+<main class="page-content">
+  <section class="heading">
+    <div class="heading__container base-container">
+      <div class="heading__column heading__column--left">
+        <a class="heading__column-link-archive" href="#">Наши услуги</a>
+        <h1 class="heading__column-title">Замена моторного масла</h1>
+        <span class="heading__column-subtitle">
+          в Санкт-Петербурге
+          БЕСПЛАТНО!
+        </span>
+        <span class="heading__column-text">При покупке бочкового масла</span>
+        <a class="heading__column-link" href="#">
+          <div class="heading__column-link-circle">
+            <svg class="heading__column-link-icon" width="23" height="9" aria-hidden="true">
+              <use href="img/icon/sprite.svg#arrow-hor-icon"></use>
+            </svg>
+          </div>
+          <span class="heading__column-link-text">Оставить заявку на замену масла </span>
+        </a>
+      </div>
+      <figure class="heading__column heading__column--right">
+        <div class="heading__column-label">
+          <div class="heading__column-label-wrapper">
+            <span class="heading__column-label-text">
+              Работаем с любой маркой автомобиля
+            </span>
+            <img class="heading__column-label-img" src="img/image/heading-label.png" width="47" height="51" aria-hidden="true">
+          </div>
+        </div>
+        <img class="heading__column-img" src="img/image/heading.jpg" width="588" height="420" alt="#">
+      </figure>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="services__container base-container">
+      <div class="services__column services__column--left">
+        <div class="services__column-side">
+          <h2 class="services__column-side-title">Заявка</h2>
+          <span class="services__column-side-subtitle">на замену масла</span>
+          <p class="services__column-side-text">
+            Наши специалисты свяжутся с вами и проконсультируют по возможным способам решения.
+          </p>
+          <form action="" class="services__column-side-form">
+            <label class="services__column-side-label">
+              Ваше имя
+              <input class="services__column-side-input" type="text" placeholder="Ваше имя">
+            </label>
+            <label class="services__column-side-label">
+              Ваш телефон
+              <input class="services__column-side-input" type="tel" placeholder="Ваш телефон">
+            </label>
+            <label class="services__column-side-label">
+              Комментарий
+              <input class="services__column-side-input" type="text" placeholder="Комментарий">
+            </label>
+            <button class="services__column-side-submit main-button">Отправить заявку</button>
+            <p class="services__column-side-data">
+              Нажимая на кнопку «Отправить заявку», вы даёте согласие на обработку своих персональных данных.
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="services__column services__column--right"></div>
+    </div>
+  </section>
+</main>
 
 @@include('components/_base/_base-footer.html')
