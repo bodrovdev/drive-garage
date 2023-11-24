@@ -1,2 +1,2 @@
-import AOS from 'aos';
-AOS.init({ once: true, });
+// import AOS from 'aos';
+// AOS.init({ once: true, });

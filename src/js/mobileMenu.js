@@ -18,6 +18,6 @@ function closeMobileMenu() {
 }
 
 // ? - Открытие / закрытие меню по клику на бургер
-burger.addEventListener('click', () => {
-  burger.classList.contains('main-nav__burger--active') ? closeMobileMenu() : openMobileMenu();
-})
+// burger.addEventListener('click', () => {
+//   burger.classList.contains('main-nav__burger--active') ? closeMobileMenu() : openMobileMenu();
+// })

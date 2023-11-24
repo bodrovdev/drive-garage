@@ -1,0 +1,25 @@
+@use "../mixins";
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+
+  & .swiper-button-disabled {
+    opacity: 0.3;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-icon {
+      width: 22px;
+      height: 8px;
+    }
+  }
+}
