@@ -1,9 +1,12 @@
 @use "../mixins";
 
 .reviews {
+  border-bottom: 1px solid #E0E0E0;
+
+  padding: 0 0 50px 0;
   margin: 50px 0 0 0;
 
-  &-label {
+  &__label {
     display: inline-block;
 
     font-size: 14px;
@@ -30,15 +33,48 @@
   }
 
   &__slider {
+    position: relative;
+
     width: 810px;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #FAF9F5 0%, rgba(250, 249, 245, 0.00) 48.21%);
+      user-select: none;
+      pointer-events: none;
+
+      z-index: 1;
+    }
+
     &-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
       width: 300px;
+      height: auto;
+
+      &-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+
+        margin: 0 0 10px 0;
+      }
 
       &-stars {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        margin: 0 0 20px 0;
       }
 
       &-star {
@@ -47,6 +83,50 @@
         &--active {
           display: block;
         }
+      }
+
+      &-text {
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 12;
+        overflow: hidden;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.14px;
+
+        transition: transform 0.3s, -webkit-line-clamp 0.3s;
+
+        margin: 0 0 20px 0;
+
+        &--clamped {
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s;
+          }
+        }
+
+        &--active {
+          -webkit-line-clamp: initial;
+
+          transition: transform 0.3s, -webkit-line-clamp 0.3s;
+        }
+      }
+
+      &-name {
+        display: inline-block;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.14px;
+        color: #7C7C7C;
+
+        margin: auto 0 0 0;
       }
     }
   }

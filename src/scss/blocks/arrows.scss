@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 21px;
 
   & .swiper-button-disabled {
     opacity: 0.3;
@@ -16,6 +15,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: transform 0.3s;
+
+    padding: 10px;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s;
+    }
 
     &-icon {
       width: 22px;
