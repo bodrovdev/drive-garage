@@ -1,0 +1,80 @@
+@use "../mixins";
+
+.contacts {
+  position: relative;
+
+  margin: 50px 0 0 0;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100%;
+    pointer-events: none;
+
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    position: relative;
+
+    width: 270px;
+    min-height: 244px;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    background: #FAF9F5;
+    pointer-events: all;
+
+    padding: 24px 33px 17px 24px;
+
+    &-graphic {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      pointer-events: none;
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+
+      margin: 0 0 15px 0;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+
+      &-item {
+        &-value {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 10px;
+
+          pointer-events: all;
+        }
+
+        & a {
+          transition: color 0.3s;
+
+          &:hover {
+            color: #0148ff;
+
+            transition: color 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
