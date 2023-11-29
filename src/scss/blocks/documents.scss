@@ -14,6 +14,8 @@
   &__slider {
     width: 100%;
 
+    padding: 5px 0 0 0;
+
     &-slide,
     .documents__slider-slide-img {
       flex-shrink: 0;
@@ -23,6 +25,13 @@
     }
 
     &-slide {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease-in-out;
+      }
+
       &-img {
         object-fit: contain !important;
         border-radius: 12px;
